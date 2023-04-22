@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+
+  /* LIGHT THEME VARIABLES */
+  --light-text-color: #000;
+  --light-background-color: #fff;
+  --light-background-color-secondary: theme(colors.neutral.100);
+  --light-background-color-tertiary: theme(colors.neutral.200);
+  --light-accent: theme(colors.emerald.700);
+  --light-accent-translucent: theme(colors.emerald.700/.2);
+  --light-accent-hover: theme(colors.emerald.700/.7);
+  --light-border-color: theme(colors.neutral.200);
+  --light-button-color: theme(colors.neutral.300);
+
+
+  /* DARK THEME VARIABLES */
+  --dark-text-color: #fff;
+  --dark-background-color: theme(colors.neutral.950);
+  --dark-background-color-secondary: theme(colors.neutral.900);
+  --dark-background-color-tertiary: theme(colors.neutral.800);
+  --dark-accent: theme(colors.rose.500);
+  --dark-accent-bright: theme(colors.rose.400);
+  --dark-accent-translucent: theme(colors.rose.500/.1);
+  --dark-accent-hover: theme(colors.rose.500/.7);
+  --dark-border-color: theme(colors.neutral.700);
+  --dark-button-color: theme(colors.neutral.800);
+
+
+  /*
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  */
+}
+
+html {
+  color: var(--light-text-color);
+  background: var(--light-background-color);
+}
+
+html.dark {
+  color: var(--dark-text-color);
+  background: var(--dark-background-color);
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: var(--light-text-color)
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--dark-text-color)
+  }
+} */
