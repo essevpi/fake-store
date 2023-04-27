@@ -1,8 +1,11 @@
 import styles from './Button.styles';
 
-const Button = ({ children, variant }) => {
+const Button = ({ children, variant, onClick, customStyle }) => {
   return (
-    <button className={`${styles.baseButton} ${styles[variant]}`}>
+    <button
+      className={`${styles.baseButton} ${styles[variant]} ${customStyle || ''}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

@@ -4,12 +4,13 @@ const styles = {
     flex
     flex-col
     items-center
-    gap-4
+    gap-2
     w-[250px]
     rounded-md
     p-4
-    bg-[--light-background-color-secondary]
-    dark:bg-[--dark-background-color-secondary]
+    bg-[--light-background-color]
+    dark:bg-[--dark-background-color-tertiary]
+    shadow-lg
   `,
   productCardHeading: `
     text-center
@@ -22,12 +23,18 @@ const styles = {
     dark:bg-gradient-text-dark
   `,
   productCardItem: `
-    text-xl
+    flex
+    w-full
+    flex-col
+    [&>span:first-child]:text-lg
+    [&>span:first-child]:font-extrabold
+    [&>span:nth-child(2)]:capitalize
   `,
   productCardPriceContainer: `
     flex
     items-end
     gap-2
+    my-4
   `,
   productCardPrice: `
     text-5xl
@@ -55,30 +62,25 @@ const styles = {
     left-[1rem]
     w-[8rem]
     h-[1.5rem]
-    text-center
     transform
     -translate-x-[30px]
-    -translate-y-[0px]
+    -translate-y-[-5px]
     rotate-45
     bg-gradient-to-tr
     from-amber-500
     to-amber-300
+    text-center
     text-black
+    text-md
+    tracking-tighter
     font-bold
-  `,
-  productCardRating: `
-    flex
-    justify-center
-  `,
-  productCardStar: `
-    text-[1.1rem]
-    text-amber-400
   `,
   productCardActionsContainer: `
     flex
     w-full
     justify-between
     gap-2
+    my-4
     [&>*]:flex-[0.5]
   `,
 };

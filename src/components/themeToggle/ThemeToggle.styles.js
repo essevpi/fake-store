@@ -21,7 +21,7 @@ const styles = {
     after:absolute
     after:top-[2px]
     after:left-[2px]
-    after:bg-white    
+    after:bg-[--light-background-color]  
     after:border-[--light-border-color]
     after:border
     after:rounded-full
@@ -33,9 +33,8 @@ const styles = {
     peer-focus:ring-[--light-accent]
     dark:peer-checked:bg-[--dark-button-color]
     dark:peer-checked:after:border-neutral-800   
-    dark:after:bg-[--dark-background-color-secondary]
+    dark:after:bg-[--dark-background-color]
     dark:peer-focus:ring-[--dark-accent]
-    transition-all
   `,
   moonIcon: `
     hidden absolute top-[4px] left-[4px] text-[--dark-accent] peer peer-checked:block peer-hover:text-[--dark-accent-hover] transition-all

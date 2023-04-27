@@ -11,7 +11,6 @@ const Navbar = () => {
         <div className={styles.navbarActions}>          
             <ThemeToggle />          
             <CartMenu />
-            <CartMenu />
         </div>
       </div>
     </nav>

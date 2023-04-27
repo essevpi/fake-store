@@ -1,20 +1,20 @@
 import Button from '../button/Button';
+import ProductRating from './productRating/ProductRating';
 import { getDiscountedPrice } from '../../utils/utils';
-import { IoStar, IoStarOutline } from 'react-icons/io5';
 
 import styles from './ProductCard.styles';
 
 const ProductCard = ({ product }) => {
   return (
     <div className={styles.productCard}>
-      <span className={styles.productCardHeading}>Daily Deal</span>
       <img
         src={product?.thumbnail}
-        className='w-full object-contain rounded-md'
+        className='aspect-square rounded-md h-100%'
       />
-      <span className={styles.productCardItem}>
-        {product?.brand} {product?.title}
-      </span>
+      <div className={styles.productCardItem}>
+        <span className='truncate ...'>{product?.brand}</span>{' '}
+        <span>{product?.title}</span>
+      </div>
       <div className={styles.productCardPriceContainer}>
         <span className={styles.productCardPrice}>
           {getDiscountedPrice(product?.price, product?.discountPercentage)}
@@ -29,15 +29,7 @@ const ProductCard = ({ product }) => {
           {Math.floor(product?.discountPercentage)}% OFF
         </div>
       </div>
-      <div className={styles.productCardRating}>
-        {[...Array(5)].map((star, i) =>
-          i < Math.round(product.rating) ? (
-            <IoStar className={styles.productCardStar} key={i} />
-          ) : (
-            <IoStarOutline className={styles.productCardStar} key={i} />
-          )
-        )}
-      </div>
+      <ProductRating rating={product.rating} />
       <div className={styles.productCardActionsContainer}>
         <Button variant='outlined'>View</Button>
         <Button variant='primary'>Buy</Button>
